@@ -1,0 +1,74 @@
+========================================================
+PREPROCESSING RESULTS
+========================================================
+Top 10 keywords in each document according to the TF-IDF matrix:
+	C1/article01.txt	[jet, aeronautics, aerorepublica, civil, colombian, airline, aviation, standard, certification, operation]
+	C1/article02.txt	[eat, pilot, belgian, belgium, association, social, sign, bca, book, series]
+	C1/article03.txt	[police, force, liu_jianfeng, caac_public_security_bureau, formation, state_council, china, plan, assign, airline]
+	C1/article04.txt	[tonga, ground, grounding, pacific, carrier, airline, boeing-737, australia, fiji_australia, royal_tongan_airline_safety_issues]
+	C1/article05.txt	[guideline, yonhap, cup, security, airline, safety, commercial, world, ministry, 11]
+	C1/article06.txt	[part, spare, investigation, suspect, investigator, manage, gip, pausania, mechanic, defense]
+	C1/article07.txt	[route, pilot, dollar, training, yuan, million, china, study, u.s., engine]
+	C1/article08.txt	[ria-novosti, russia, civil, flight, transport, aviation, safety, aleksandr_neradko, joint, civilian]
+	C4/article01.txt	[disease, greece, spread, animal, veterinary, communicable, albania_turkey_macedonia, vestfold, ostfold, infected]
+	C4/article02.txt	[village, disease, pa, cattle, area, bedouin, negev_galilee, minority, yirka, galilee]
+	C4/article03.txt	[drug, vaccine, due, raw, abbud, abbas, livestock, iraq, import, organization]
+	C4/article04.txt	[campaign, dr., disease, veterinary, follow-up, recall, goat, successful, buffalo, removal]
+	C4/article05.txt	[meat, face, disease, mission, itartass, tumen, warning, river, foot, dead]
+	C4/article06.txt	[graefe_zu_baringdorf, cap, agriculture, health, vigilance, european, disease, president, reform, bse]
+	C4/article07.txt	[germany, german, agriculture, france, crisis, berlin, minister, green, realization, summit]
+	C4/article08.txt	[glavany, le_figaro, mayenne, france, crisis, europe, slaughter, consumption, adopt, sheep]
+	C7/article01.txt	[cent, loan, rate, mortgage, 9.75, war, price, 9.5, august, hongkong_bank]
+	C7/article02.txt	[mortgage, 5, percent, recording, fundamental, sort, job, economy, prodi, agree]
+	C7/article03.txt	[rate, mortgage, greater, 5, dream, bank, level, system, banking, today]
+	C7/article04.txt	[earthquake, participant, victim, percent, taiwan, estimate, ministry_finance, cna, quake-affected, rate]
+	C7/article05.txt	[mr., takenaka, yen, loan, approx, corporation, bank, million, summer, financial]
+	C7/article06.txt	[rate, hike, construction, benchmark, percent, housing, loan, ministry, home, source]
+	C7/article07.txt	[rate, bank, boj, fixed, fuji_bank, raise, mortgage, major, bank_tokyo-mitsubishi, 2.40]
+	C7/article08.txt	[mortgage, rate, bank, abbey, claim, italian, press, cassaro, abbey_national, accuse]
+
+========================================================
+CLUSTERING RESULTS
+========================================================
+Cluster 1:
+	Keywords associated to the cluster:
+		[agriculture, disease, crisis, france, veterinary]
+	Files in the cluster:
+		C4/article01.txt
+		C4/article02.txt
+		C4/article03.txt
+		C4/article04.txt
+		C4/article05.txt
+		C4/article06.txt
+		C4/article07.txt
+		C4/article08.txt
+Cluster 2:
+	Keywords associated to the cluster:
+		[loan, bank, mortgage, rate, 5, percent]
+	Files in the cluster:
+		C7/article01.txt
+		C7/article02.txt
+		C7/article03.txt
+		C7/article04.txt
+		C7/article05.txt
+		C7/article06.txt
+		C7/article07.txt
+		C7/article08.txt
+Cluster 3:
+	Keywords associated to the cluster:
+		[pilot, china, safety, civil, aviation, airline]
+	Files in the cluster:
+		C1/article01.txt
+		C1/article02.txt
+		C1/article03.txt
+		C1/article04.txt
+		C1/article05.txt
+		C1/article06.txt
+		C1/article07.txt
+		C1/article08.txt
+
+========================================================
+VISUALIZATION RESULTS
+========================================================
+A copy of the generated chart has been saved as "Raw Data.png"
+A copy of the generated chart has been saved as "Clustered Data.png"

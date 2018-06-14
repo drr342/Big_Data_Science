@@ -1,0 +1,14 @@
+Spark and Hadoop analytics efforts often stumble when teams try to turn small pilot projects into larger operational apps meant for data science teams and business analysts. For many, it is an obstacle in their quest to work with big data.
+
+
+Configuration complexity has sometimes been the stumbling block. A custom-configured prototype built by a lone data scientist can take a long time to recreate, and then fail when it is shared by a wider user pool. To grapple with the problem, some individuals are applying DevOps-oriented container and microservices techniques as they sew together Spark and Hadoop components.
+
+"Our data science teams and business stakeholders don't want to wait days or weeks for us to set up a new Spark cluster or other big data environment with all the tools, versions, configurations and data they need," said Ramesh Thyagarajan, managing director of The Advisory Board Company, a Washington, D.C.-based firm that provides analytics and consulting services to healthcare organizations.
+
+He said he views Docker containers as a key enabling technology on the road to better agility for big data scientists and business users alike.
+
+To bring such DevOps style deployment to its big data applications, Advisory Board is using BlueData Software's EPIC software platform to run Spark SQL and the Spark analytics engine, as well as Apache Zeppelin developer notebooks. "For us, it's all about agility and faster business innovation," Thyagarajan said, emphasizing BlueData platform's capabilities as a container-based architecture for big data deployments.
+
+According to Thyagarajan, the platform provides on-demand spin-ups of new Spark clusters to data scientists and business analysts, who are basically shielded from the complexity underlying the configurations required for such deployments.
+
+He said his team built its own framework to bring data into the Hadoop Distributed File System (HDFS). As a result, the on-demand Spark clusters work off a single curated source of data. Such centralization is important. "There is no way we could have supported 400-plus users, each creating their own cluster," he said.

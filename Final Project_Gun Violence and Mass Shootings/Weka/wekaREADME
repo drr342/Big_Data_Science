@@ -1,0 +1,29 @@
+Weka
+==========================
+
+This folder contains:
+- Datasets (.arff files) corresponding to the three zip code data matrices and the MSA data matrix
+- Screenshots of various output produced by Weka
+- Text output from running GridSearch
+
+To Run:
+1) Open weka explorer
+2) Under the preprocess tab, open any .arff file (depending on which dataset you want)
+3a) For Feature Selection:
+	1) Select attributes tab
+	2) Select Evaluator and Method
+		2a) For our purposes, select Ranker under search method, and either InfoGainAttributeEval or CorrelationAttributeEval under attribute
+		2b) Keep all other parameters default
+	3) For MSA, make sure LABEL is selected, for Zip code matrices, make sure VIOLENT? is selected
+	4) Hit start
+3b) For Classification:
+	1) Open classify tab
+	2) Right click text box under classifier (by default it should be "ZeroR"
+	3) Select Enter Configuration
+	4) Paste one of following (depending on which one you want):
+		weka.classifiers.meta.CVParameterSelection -P "H 1.0 10.0 10.0" -X 10 -S 1 -W weka.classifiers.functions.MultilayerPerceptron -- -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H a
+		weka.classifiers.meta.CVParameterSelection -P "I 100.0 1000.0 10.0" -X 10 -S 1 -W weka.classifiers.meta.AdaBoostM1 -- -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+		weka.classifiers.meta.CVParameterSelection -P "L 10.0 100.0 10.0" -X 10 -S 1 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L 1 -I 0.0
+		weka.classifiers.meta.CVParameterSelection -P "I 100.0 500.0 51.0" -X 10 -S 1 -W weka.classifiers.meta.AdaBoostM1 -- -P 100 -S 1 -I 10 -W weka.classifiers.trees.DecisionStump
+	5) For MSA, make sure LABEL is selected, for Zip code matrices, make sure VIOLENT? is selected
+	6) Hit Start (it may take a bit)

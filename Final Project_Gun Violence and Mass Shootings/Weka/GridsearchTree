@@ -1,0 +1,682 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.meta.CVParameterSelection -P "L 10.0 100.0 10.0" -X 10 -S 1 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L 1 -I 0.0
+Relation:     zip_2014_predictive_tabs.txt-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.supervised.attribute.NominalToBinary-weka.filters.unsupervised.attribute.NominalToBinary-Rlast-weka.filters.unsupervised.attribute.Remove-R1-3
+Instances:    33120
+Attributes:   92
+              03) Household median income in dollars
+              04) Household mean income in dollars
+              05) Total population 18 to 24 years
+              06) Percentage of 05) less than high school
+              07) Percentage of 05) high school
+              08) Percentage of 05) some college
+              09) Percentage of 05) bachelor's
+              10) Total population 25 years and over
+              11) Percentage of 10)less than 9th grade
+              12) Percentage of 10) 9th to 12th no diploma
+              13) Percentage of 10) high school
+              14) Percentage of 10) some college
+              15) Percentage of 10) associate's degree
+              16) Percentage of 10) bachelor's
+              17) Percentage of 10) graduate degree
+              18) Total population 25 to 34 years
+              19) Percentage of 18) high school or higher
+              20) Percentage of 18) bachelor's or higher
+              21) Total population 35 to 44 years
+              22) Percentage of 21) high school or higher
+              23) Percentage of 21) bachelor's or higher
+              24) Total population 45 to 64 years
+              25) Percentage of 24) high school or higher
+              26) Percentage of 24) bachelor's or higher
+              27) Total population 65 and over
+              28) Percentage of 27) high school or higher
+              29) Percentage of 27) bachelor's or higher
+              "30) Median earnings in dollars, population 25 and over"
+              "31) Median earnings in dollars, population 25 and over less than high school"
+              "32) Median earnings in dollars, population 25 and over high school"
+              "33) Median earnings in dollars, population 25 and over some college"
+              "34) Median earnings in dollars, population 25 and over bachelor's"
+              "35) Median earnings in dollars, population 25 and over graduate degree"
+              36) Population total
+              37) Population percentage: not Hispanic
+              38) Population percentage: not Hispanic white
+              39) Population percentage: not Hispanic black
+              40) Population percentage: not Hispanic American Indian or native
+              41) Population percentage: not Hispanic Asian
+              42) Population percentage: not Hispanic native Hawaiian or Pacific islander
+              43) Population percentage: not Hispanic some other race
+              44) Population percentage: not Hispanic two or more races
+              45) Population percentage: not Hispanic two or more races including some other race
+              46) Population percentage: not Hispanic two or more races excluding some other race
+              47) Population percentage: Hispanic
+              48) Population percentage: Hispanic white
+              49) Population percentage: Hispanic black
+              50) Population percentage: Hispanic American Indian or native
+              51) Population percentage: Hispanic Asian
+              52) Population percentage: Hispanic native Hawaiian or Pacific islander
+              53) Population percentage: Hispanic some other race
+              54) Population percentage: Hispanic two or more races
+              55) Population percentage: Hispanic two or more races including some other race
+              56) Population percentage: Hispanic two or more races excluding some other race
+              57) Population total
+              58) Population percentage: under 5 years
+              59) Population percentage: 5 to 9 years
+              60) Population percentage: 10 to 14 years
+              61) Population percentage: 15 to 19 years
+              62) Population percentage: 20 to 24 years
+              63) Population percentage: 25 to 29 years
+              64) Population percentage: 30 to 34 years
+              65) Population percentage: 35 to 39 years
+              66) Population percentage: 40 to 44 years
+              67) Population percentage: 45 to 49 years
+              68) Population percentage: 50 to 54 years
+              69) Population percentage: 55 to 59 years
+              70) Population percentage: 60 to 64 years
+              71) Population percentage: 65 to 69 years
+              72) Population percentage: 70 to 74 years
+              73) Population percentage: 75 to 79 years
+              74) Population percentage: 80 to 84 years
+              75) Population percentage: 85 years and over
+              76) Population percentage: 5 to 14 years
+              77) Population percentage: 15 to 17 years
+              78) Population percentage: 18 to 24 years
+              79) Population percentage: 15 to 44 years
+              80) Population percentage: 16 years and over
+              81) Population percentage: 18 years and over
+              82) Population percentage: 60 years and over
+              83) Population percentage: 62 years and over
+              84) Population percentage: 65 years and over
+              85) Population percentage: 75 years and over
+              86) Median age
+              87) Sex ratio (males per 100 females)
+              88) Age dependency ratio
+              89) Old-age dependency ratio
+              90) Child dependency ratio
+              91) Licenses
+              92) Manufacturing
+              93) Gun purchases approximate
+              VIOLENT?
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+Cross-validated Parameter selection.
+Classifier: weka.classifiers.trees.REPTree
+Cross-validation Parameter: '-L' ranged from 10.0 to 100.0 with 10.0 steps
+Classifier Options: -L 20 -M 2 -V 0.001 -N 3 -S 1 -I 0.0
+
+
+REPTree
+============
+
+92) Manufacturing < 0.5
+|   91) Licenses < 54.5 : 0 (11141/159) [5631/77]
+|   91) Licenses >= 54.5
+|   |   93) Gun purchases approximate < 281011.2
+|   |   |   39) Population percentage: not Hispanic black < 4.34
+|   |   |   |   76) Population percentage: 5 to 14 years < 14.35
+|   |   |   |   |   91) Licenses < 108.5
+|   |   |   |   |   |   "33) Median earnings in dollars, population 25 and over some college" < 14598 : 1 (2.06/0.06) [0.02/0]
+|   |   |   |   |   |   "33) Median earnings in dollars, population 25 and over some college" >= 14598 : 0 (132.68/4) [87.98/8.98]
+|   |   |   |   |   91) Licenses >= 108.5 : 0 (48/10) [27/3]
+|   |   |   |   76) Population percentage: 5 to 14 years >= 14.35 : 0 (66.27/0) [31/4]
+|   |   |   39) Population percentage: not Hispanic black >= 4.34
+|   |   |   |   93) Gun purchases approximate < 159189.45 : 0 (23/0) [17/1]
+|   |   |   |   93) Gun purchases approximate >= 159189.45
+|   |   |   |   |   55) Population percentage: Hispanic two or more races including some other race < 0.12
+|   |   |   |   |   |   28) Percentage of 27) high school or higher < 69.75
+|   |   |   |   |   |   |   91) Licenses < 82 : 0 (8/0) [4/1]
+|   |   |   |   |   |   |   91) Licenses >= 82 : 1 (12/4) [3/1]
+|   |   |   |   |   |   28) Percentage of 27) high school or higher >= 69.75 : 1 (10/0) [7/3]
+|   |   |   |   |   55) Population percentage: Hispanic two or more races including some other race >= 0.12 : 0 (12/1) [8/3]
+|   |   93) Gun purchases approximate >= 281011.2
+|   |   |   93) Gun purchases approximate < 432082.6
+|   |   |   |   93) Gun purchases approximate < 409078.95
+|   |   |   |   |   73) Population percentage: 75 to 79 years < 2.05
+|   |   |   |   |   |   72) Population percentage: 70 to 74 years < 2.5
+|   |   |   |   |   |   |   13) Percentage of 10) high school < 40.8 : 1 (10/3) [5/1]
+|   |   |   |   |   |   |   13) Percentage of 10) high school >= 40.8 : 0 (5/0) [1/0]
+|   |   |   |   |   |   72) Population percentage: 70 to 74 years >= 2.5 : 1 (12/0) [13/6]
+|   |   |   |   |   73) Population percentage: 75 to 79 years >= 2.05 : 0 (96/30) [51/15]
+|   |   |   |   93) Gun purchases approximate >= 409078.95 : 1 (22/2) [4/0]
+|   |   |   93) Gun purchases approximate >= 432082.6 : 0 (67/8) [41/3]
+92) Manufacturing >= 0.5
+|   41) Population percentage: not Hispanic Asian < 1.71
+|   |   91) Licenses < 132.5
+|   |   |   91) Licenses < 3.5
+|   |   |   |   92) Manufacturing < 4.5
+|   |   |   |   |   93) Gun purchases approximate < 309422.55
+|   |   |   |   |   |   93) Gun purchases approximate < 159189.45 : 0 (118/9) [43/1]
+|   |   |   |   |   |   93) Gun purchases approximate >= 159189.45
+|   |   |   |   |   |   |   66) Population percentage: 40 to 44 years < 5.05
+|   |   |   |   |   |   |   |   "32) Median earnings in dollars, population 25 and over high school" < 28467.5 : 0 (46.38/2.93) [16.37/4.35]
+|   |   |   |   |   |   |   |   "32) Median earnings in dollars, population 25 and over high school" >= 28467.5
+|   |   |   |   |   |   |   |   |   89) Old-age dependency ratio < 37.45 : 1 (13.58/6.01) [12.59/5.2]
+|   |   |   |   |   |   |   |   |   89) Old-age dependency ratio >= 37.45 : 0 (8.91/0.37) [4.04/2.26]
+|   |   |   |   |   |   |   66) Population percentage: 40 to 44 years >= 5.05 : 0 (89.13/37.13) [38/11]
+|   |   |   |   |   93) Gun purchases approximate >= 309422.55
+|   |   |   |   |   |   23) Percentage of 21) bachelor's or higher < 13.6
+|   |   |   |   |   |   |   24) Total population 45 to 64 years < 1918.5 : 0 (91.3/9.54) [40.79/0]
+|   |   |   |   |   |   |   24) Total population 45 to 64 years >= 1918.5 : 1 (3/-0) [1/0]
+|   |   |   |   |   |   23) Percentage of 21) bachelor's or higher >= 13.6 : 0 (79.7/0.46) [36.21/1]
+|   |   |   |   92) Manufacturing >= 4.5
+|   |   |   |   |   39) Population percentage: not Hispanic black < 1.1
+|   |   |   |   |   |   93) Gun purchases approximate < 32484.4 : 0 (35/0) [21/0]
+|   |   |   |   |   |   93) Gun purchases approximate >= 32484.4
+|   |   |   |   |   |   |   "30) Median earnings in dollars, population 25 and over" < 38564.5
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 50133.75 : 0 (106.09/51.55) [55.87/21.32]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 50133.75
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 551823.45
+|   |   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher < 48.55
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 6.5 : 1 (19.49/3.49) [11.72/2.95]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 6.5 : 0 (113.68/39.03) [55.26/12.76]
+|   |   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher >= 48.55
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 38721
+|   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 95038.1 : 0 (83.87/0) [43.66/0]
+|   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 95038.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 11107.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   "32) Median earnings in dollars, population 25 and over high school" < 31218 : 0 (621.57/108.32) [289.58/71.14]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   "32) Median earnings in dollars, population 25 and over high school" >= 31218 : 0 (193.64/62.6) [108.55/32.65]
+|   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 11107.5 : 0 (43.69/0) [17.23/0]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 38721
+|   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 141594.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 45939.5 : 0 (4.69/0) [3/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 45939.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 93927.2 : 1 (19.69/0) [5.69/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 93927.2
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 113404 : 0 (4.69/0) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 113404 : 1 (14.47/2) [6.15/3.77]
+|   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 141594.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 52972.5 : 1 (6.06/0) [5.77/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 52972.5 : 0 (51.38/4.74) [26.74/5.06]
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 551823.45
+|   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college < 13.25 : 0 (184.31/41.17) [85.9/26.97]
+|   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college >= 13.25
+|   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 1064852.4
+|   |   |   |   |   |   |   |   |   |   |   |   55) Population percentage: Hispanic two or more races including some other race < 2.41
+|   |   |   |   |   |   |   |   |   |   |   |   |   46) Population percentage: not Hispanic two or more races excluding some other race < 2.67
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   60) Population percentage: 10 to 14 years < 4.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   82) Population percentage: 60 years and over < 25.35 : 0 (35.78/5.75) [14.75/5.68]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   82) Population percentage: 60 years and over >= 25.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   15) Percentage of 10) associate's degree < 8.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years < 7.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher < 92.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   66) Population percentage: 40 to 44 years < 4.8 : 0 (7.65/3.46) [7.82/3.03]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   66) Population percentage: 40 to 44 years >= 4.8 : 1 (7.24/0.1) [5.04/2.01]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher >= 92.25 : 0 (21.72/6.65) [2.67/1.08]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years >= 7.25 : 1 (7.24/0.1) [2.04/1.01]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   15) Percentage of 10) associate's degree >= 8.75 : 0 (26.18/5.28) [18.7/4.1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   60) Population percentage: 10 to 14 years >= 4.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   24) Total population 45 to 64 years < 2172.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   69) Population percentage: 55 to 59 years < 10.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   84) Population percentage: 65 years and over < 6.85 : 1 (10.13/1.15) [3.06/1.02]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   84) Population percentage: 65 years and over >= 6.85 : 0 (115.57/47.14) [51.48/23.25]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   69) Population percentage: 55 to 59 years >= 10.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   15) Percentage of 10) associate's degree < 10.5 : 1 (16.58/0.24) [4.1/2.03]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   15) Percentage of 10) associate's degree >= 10.5 : 0 (9.32/4.19) [5.06/0.04]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   24) Total population 45 to 64 years >= 2172.5 : 1 (10/-0) [5/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   46) Population percentage: not Hispanic two or more races excluding some other race >= 2.67 : 0 (40.77/7) [18.77/4.77]
+|   |   |   |   |   |   |   |   |   |   |   |   55) Population percentage: Hispanic two or more races including some other race >= 2.41 : 1 (7/0) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 1064852.4 : 0 (49.64/6.51) [23.58/3.29]
+|   |   |   |   |   |   |   "30) Median earnings in dollars, population 25 and over" >= 38564.5
+|   |   |   |   |   |   |   |   11) Percentage of 10)less than 9th grade < 1.95
+|   |   |   |   |   |   |   |   |   24) Total population 45 to 64 years < 74.5
+|   |   |   |   |   |   |   |   |   |   12) Percentage of 10) 9th to 12th no diploma < 8.25
+|   |   |   |   |   |   |   |   |   |   |   68) Population percentage: 50 to 54 years < 2.8
+|   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 130126.95 : 0 (9.93/0.65) [4.62/1.65]
+|   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 130126.95
+|   |   |   |   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college < 11.8 : 0 (14.52/4.5) [4.36/1.41]
+|   |   |   |   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college >= 11.8
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   21) Total population 35 to 44 years < 4.5 : 1 (6.12/2.69) [4.37/2.47]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   21) Total population 35 to 44 years >= 4.5 : 1 (5.45/0.23) [3.45/1.23]
+|   |   |   |   |   |   |   |   |   |   |   68) Population percentage: 50 to 54 years >= 2.8 : 0 (36.93/3.02) [12.75/7.53]
+|   |   |   |   |   |   |   |   |   |   12) Percentage of 10) 9th to 12th no diploma >= 8.25
+|   |   |   |   |   |   |   |   |   |   |   70) Population percentage: 60 to 64 years < 5.55 : 1 (16.71/4.41) [9.54/4.77]
+|   |   |   |   |   |   |   |   |   |   |   70) Population percentage: 60 to 64 years >= 5.55 : 0 (8.33/1.76) [9.59/2.59]
+|   |   |   |   |   |   |   |   |   24) Total population 45 to 64 years >= 74.5
+|   |   |   |   |   |   |   |   |   |   80) Population percentage: 16 years and over < 87.7 : 0 (178.68/79.23) [79/35]
+|   |   |   |   |   |   |   |   |   |   80) Population percentage: 16 years and over >= 87.7
+|   |   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college < 36
+|   |   |   |   |   |   |   |   |   |   |   |   69) Population percentage: 55 to 59 years < 3.3 : 0 (7.23/2) [2.23/0]
+|   |   |   |   |   |   |   |   |   |   |   |   69) Population percentage: 55 to 59 years >= 3.3
+|   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years < 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   04) Household mean income in dollars < 74828 : 1 (8/1) [4.39/2.39]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   04) Household mean income in dollars >= 74828 : 0 (3/0) [8.06/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years >= 0.5 : 1 (25.23/0) [15/7]
+|   |   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college >= 36 : 0 (4.68/0.23) [1/0]
+|   |   |   |   |   |   |   |   11) Percentage of 10)less than 9th grade >= 1.95
+|   |   |   |   |   |   |   |   |   92) Manufacturing < 19.5
+|   |   |   |   |   |   |   |   |   |   04) Household mean income in dollars < 55181
+|   |   |   |   |   |   |   |   |   |   |   72) Population percentage: 70 to 74 years < 1.85
+|   |   |   |   |   |   |   |   |   |   |   |   26) Percentage of 24) bachelor's or higher < 3.65 : 0 (4.11/0.34) [0.7/0.23]
+|   |   |   |   |   |   |   |   |   |   |   |   26) Percentage of 24) bachelor's or higher >= 3.65 : 1 (2.04/0.04) [2.01/0.01]
+|   |   |   |   |   |   |   |   |   |   |   72) Population percentage: 70 to 74 years >= 1.85 : 1 (19.29/0.95) [5.55/2.55]
+|   |   |   |   |   |   |   |   |   |   04) Household mean income in dollars >= 55181 : 0 (25.3/6.45) [12.36/6]
+|   |   |   |   |   |   |   |   |   92) Manufacturing >= 19.5
+|   |   |   |   |   |   |   |   |   |   66) Population percentage: 40 to 44 years < 7.15 : 0 (90.19/11.7) [55.23/14.85]
+|   |   |   |   |   |   |   |   |   |   66) Population percentage: 40 to 44 years >= 7.15
+|   |   |   |   |   |   |   |   |   |   |   41) Population percentage: not Hispanic Asian < 0.99
+|   |   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) < 102
+|   |   |   |   |   |   |   |   |   |   |   |   |   18) Total population 25 to 34 years < 3 : 1 (4.21/1.26) [2.33/0.1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   18) Total population 25 to 34 years >= 3 : 0 (27/2) [14.23/4]
+|   |   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) >= 102 : 0 (32.01/15.97) [14.56/3.24]
+|   |   |   |   |   |   |   |   |   |   |   41) Population percentage: not Hispanic Asian >= 0.99 : 1 (7/1) [1/1]
+|   |   |   |   |   39) Population percentage: not Hispanic black >= 1.1
+|   |   |   |   |   |   27) Total population 65 and over < 1638.5
+|   |   |   |   |   |   |   38) Population percentage: not Hispanic white < 94.84
+|   |   |   |   |   |   |   |   92) Manufacturing < 16.5 : 0 (132.33/35.17) [70/24]
+|   |   |   |   |   |   |   |   92) Manufacturing >= 16.5
+|   |   |   |   |   |   |   |   |   83) Population percentage: 62 years and over < 22.45
+|   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years < 8.95
+|   |   |   |   |   |   |   |   |   |   |   12) Percentage of 10) 9th to 12th no diploma < 27.65
+|   |   |   |   |   |   |   |   |   |   |   |   42) Population percentage: not Hispanic native Hawaiian or Pacific islander < 0.24
+|   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years < 4.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   41) Population percentage: not Hispanic Asian < 0.43
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   67) Population percentage: 45 to 49 years < 0.5 : 0 (6/0) [6/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   67) Population percentage: 45 to 49 years >= 0.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years < 1.15 : 1 (15/0) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years >= 1.15 : 0 (60/28) [19/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   41) Population percentage: not Hispanic Asian >= 0.43
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 95956.5 : 0 (20/1) [11/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 95956.5 : 1 (4/1) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years >= 4.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) < 92.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years < 1 : 0 (3.55/0) [0/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years >= 1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   "33) Median earnings in dollars, population 25 and over some college" < 29635
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   85) Population percentage: 75 years and over < 4.85 : 1 (9.39/0) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   85) Population percentage: 75 years and over >= 4.85 : 0 (11.39/4.39) [3.39/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   "33) Median earnings in dollars, population 25 and over some college" >= 29635 : 1 (32.22/0) [12.61/3.61]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) >= 92.35
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   18) Total population 25 to 34 years < 160 : 1 (46.45/11.45) [20/12]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   18) Total population 25 to 34 years >= 160
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   69) Population percentage: 55 to 59 years < 8.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   86) Median age < 38.85
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   19) Percentage of 18) high school or higher < 82.75 : 1 (25/7) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   19) Percentage of 18) high school or higher >= 82.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   86) Median age < 29.8 : 1 (4/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   86) Median age >= 29.8 : 0 (11/0) [11/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   86) Median age >= 38.85
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   17) Percentage of 10) graduate degree < 5.95 : 0 (20/0) [10/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   17) Percentage of 10) graduate degree >= 5.95
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   82) Population percentage: 60 years and over < 21.75 : 0 (5/0) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   82) Population percentage: 60 years and over >= 21.75 : 1 (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   69) Population percentage: 55 to 59 years >= 8.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   85) Population percentage: 75 years and over < 5.25 : 0 (20/10) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   85) Population percentage: 75 years and over >= 5.25 : 1 (14/0) [6/3]
+|   |   |   |   |   |   |   |   |   |   |   |   42) Population percentage: not Hispanic native Hawaiian or Pacific islander >= 0.24 : 0 (8/0) [6/5]
+|   |   |   |   |   |   |   |   |   |   |   12) Percentage of 10) 9th to 12th no diploma >= 27.65 : 1 (12/0) [6/2]
+|   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years >= 8.95 : 0 (20/4) [9.17/5.17]
+|   |   |   |   |   |   |   |   |   83) Population percentage: 62 years and over >= 22.45
+|   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years < 5.25 : 0 (134/40) [56/16]
+|   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years >= 5.25 : 1 (50/22) [33/15]
+|   |   |   |   |   |   |   38) Population percentage: not Hispanic white >= 94.84
+|   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher < 47.6 : 1 (11.16/5.14) [0.02/0]
+|   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher >= 47.6
+|   |   |   |   |   |   |   |   |   76) Population percentage: 5 to 14 years < 12
+|   |   |   |   |   |   |   |   |   |   78) Population percentage: 18 to 24 years < 9.15
+|   |   |   |   |   |   |   |   |   |   |   63) Population percentage: 25 to 29 years < 6.95
+|   |   |   |   |   |   |   |   |   |   |   |   58) Population percentage: under 5 years < 4.1 : 0 (10.88/0) [10/3]
+|   |   |   |   |   |   |   |   |   |   |   |   58) Population percentage: under 5 years >= 4.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   72) Population percentage: 70 to 74 years < 3.95 : 0 (4/0) [6/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   72) Population percentage: 70 to 74 years >= 3.95 : 1 (4/0) [7/3]
+|   |   |   |   |   |   |   |   |   |   |   63) Population percentage: 25 to 29 years >= 6.95 : 1 (5/0) [6/3]
+|   |   |   |   |   |   |   |   |   |   78) Population percentage: 18 to 24 years >= 9.15 : 0 (17/0) [14/7]
+|   |   |   |   |   |   |   |   |   76) Population percentage: 5 to 14 years >= 12 : 0 (43/0) [30/13]
+|   |   |   |   |   |   27) Total population 65 and over >= 1638.5
+|   |   |   |   |   |   |   46) Population percentage: not Hispanic two or more races excluding some other race < 1.39
+|   |   |   |   |   |   |   |   21) Total population 35 to 44 years < 1361 : 0 (4/2) [6/2]
+|   |   |   |   |   |   |   |   21) Total population 35 to 44 years >= 1361 : 1 (43/0) [16/2]
+|   |   |   |   |   |   |   46) Population percentage: not Hispanic two or more races excluding some other race >= 1.39 : 1 (30/12) [18/3]
+|   |   |   91) Licenses >= 3.5
+|   |   |   |   93) Gun purchases approximate < 223801.1
+|   |   |   |   |   91) Licenses < 53.5 : 0 (135/5) [59/3]
+|   |   |   |   |   91) Licenses >= 53.5
+|   |   |   |   |   |   39) Population percentage: not Hispanic black < 15.23
+|   |   |   |   |   |   |   92) Manufacturing < 3797
+|   |   |   |   |   |   |   |   03) Household median income in dollars < 50126.5
+|   |   |   |   |   |   |   |   |   12) Percentage of 10) 9th to 12th no diploma < 6.55 : 0 (41.57/0.61) [31.61/4]
+|   |   |   |   |   |   |   |   |   12) Percentage of 10) 9th to 12th no diploma >= 6.55
+|   |   |   |   |   |   |   |   |   |   15) Percentage of 10) associate's degree < 16
+|   |   |   |   |   |   |   |   |   |   |   48) Population percentage: Hispanic white < 2.51
+|   |   |   |   |   |   |   |   |   |   |   |   48) Population percentage: Hispanic white < 2.37
+|   |   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 178348.25
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher < 52.9 : 1 (5.03/0.03) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher >= 52.9
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   65) Population percentage: 35 to 39 years < 8.3 : 0 (56.38/10) [18/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   65) Population percentage: 35 to 39 years >= 8.3 : 1 (4.03/0.03) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 178348.25 : 0 (19/0) [10/3]
+|   |   |   |   |   |   |   |   |   |   |   |   48) Population percentage: Hispanic white >= 2.37 : 1 (3/-0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   48) Population percentage: Hispanic white >= 2.51 : 0 (35/1) [15/2]
+|   |   |   |   |   |   |   |   |   |   15) Percentage of 10) associate's degree >= 16 : 1 (3.01/0.01) [2/2]
+|   |   |   |   |   |   |   |   03) Household median income in dollars >= 50126.5 : 0 (108.97/39.39) [56.39/12]
+|   |   |   |   |   |   |   92) Manufacturing >= 3797
+|   |   |   |   |   |   |   |   92) Manufacturing < 9428.5 : 1 (24/1) [11/3]
+|   |   |   |   |   |   |   |   92) Manufacturing >= 9428.5 : 0 (21/5) [12/0]
+|   |   |   |   |   |   39) Population percentage: not Hispanic black >= 15.23
+|   |   |   |   |   |   |   55) Population percentage: Hispanic two or more races including some other race < 0.66
+|   |   |   |   |   |   |   |   61) Population percentage: 15 to 19 years < 7.75
+|   |   |   |   |   |   |   |   |   76) Population percentage: 5 to 14 years < 17.5
+|   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years < 2.15 : 1 (13/0) [5/2]
+|   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years >= 2.15
+|   |   |   |   |   |   |   |   |   |   |   59) Population percentage: 5 to 9 years < 6
+|   |   |   |   |   |   |   |   |   |   |   |   61) Population percentage: 15 to 19 years < 5.65 : 1 (5/2) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   61) Population percentage: 15 to 19 years >= 5.65 : 0 (13/0) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   59) Population percentage: 5 to 9 years >= 6
+|   |   |   |   |   |   |   |   |   |   |   |   13) Percentage of 10) high school < 36.2 : 0 (27/12) [7/2]
+|   |   |   |   |   |   |   |   |   |   |   |   13) Percentage of 10) high school >= 36.2 : 1 (16/0) [3/1]
+|   |   |   |   |   |   |   |   |   76) Population percentage: 5 to 14 years >= 17.5 : 0 (7/0) [1/1]
+|   |   |   |   |   |   |   |   61) Population percentage: 15 to 19 years >= 7.75 : 1 (17/0) [9/3]
+|   |   |   |   |   |   |   55) Population percentage: Hispanic two or more races including some other race >= 0.66 : 0 (9/0) [3/2]
+|   |   |   |   93) Gun purchases approximate >= 223801.1
+|   |   |   |   |   91) Licenses < 90.5 : 0 (476/24) [222/17]
+|   |   |   |   |   91) Licenses >= 90.5
+|   |   |   |   |   |   44) Population percentage: not Hispanic two or more races < 8.93 : 0 (474/80) [202/38]
+|   |   |   |   |   |   44) Population percentage: not Hispanic two or more races >= 8.93
+|   |   |   |   |   |   |   64) Population percentage: 30 to 34 years < 4.5 : 0 (5/0) [1/0]
+|   |   |   |   |   |   |   64) Population percentage: 30 to 34 years >= 4.5 : 1 (11/0) [4/1]
+|   |   91) Licenses >= 132.5
+|   |   |   38) Population percentage: not Hispanic white < 84.71
+|   |   |   |   38) Population percentage: not Hispanic white < 4.71 : 1 (71.02/8.02) [27/4]
+|   |   |   |   38) Population percentage: not Hispanic white >= 4.71
+|   |   |   |   |   92) Manufacturing < 3972.5
+|   |   |   |   |   |   91) Licenses < 277.5
+|   |   |   |   |   |   |   71) Population percentage: 65 to 69 years < 2.05 : 0 (21/3) [7/3]
+|   |   |   |   |   |   |   71) Population percentage: 65 to 69 years >= 2.05
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 97284.2 : 0 (13/1) [3/0]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 97284.2
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 313197.9 : 1 (116/29) [56/15]
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 313197.9
+|   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 791919.65
+|   |   |   |   |   |   |   |   |   |   |   91) Licenses < 214.5
+|   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 204.5 : 1 (67/21) [41/11]
+|   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 204.5 : 0 (23/3) [9/0]
+|   |   |   |   |   |   |   |   |   |   |   91) Licenses >= 214.5
+|   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 56.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   27) Total population 65 and over < 1966.5 : 1 (6/0) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   27) Total population 65 and over >= 1966.5 : 0 (7/0) [4/3]
+|   |   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 56.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years < 5.65 : 0 (39/1) [17/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years >= 5.65 : 1 (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 791919.65
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 5.5 : 0 (7/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 5.5
+|   |   |   |   |   |   |   |   |   |   |   |   45) Population percentage: not Hispanic two or more races including some other race < 0.02
+|   |   |   |   |   |   |   |   |   |   |   |   |   38) Population percentage: not Hispanic white < 64.22 : 1 (26.07/0.07) [14/6]
+|   |   |   |   |   |   |   |   |   |   |   |   |   38) Population percentage: not Hispanic white >= 64.22
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   91) Licenses < 206.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) < 90.5 : 0 (4.07/0) [2/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) >= 90.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years < 3.4 : 1 (7/0) [6/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years >= 3.4 : 0 (4/1) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   91) Licenses >= 206.5 : 1 (11/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   45) Population percentage: not Hispanic two or more races including some other race >= 0.02
+|   |   |   |   |   |   |   |   |   |   |   |   |   22) Percentage of 21) high school or higher < 87.35 : 0 (10.07/1) [11/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   22) Percentage of 21) high school or higher >= 87.35 : 1 (16/4) [7/2]
+|   |   |   |   |   |   91) Licenses >= 277.5
+|   |   |   |   |   |   |   16) Percentage of 10) bachelor's < 4.4 : 0 (6/0) [3/1]
+|   |   |   |   |   |   |   16) Percentage of 10) bachelor's >= 4.4 : 1 (151/28) [71/16]
+|   |   |   |   |   92) Manufacturing >= 3972.5
+|   |   |   |   |   |   92) Manufacturing < 113342.5
+|   |   |   |   |   |   |   92) Manufacturing < 9493.5
+|   |   |   |   |   |   |   |   91) Licenses < 297
+|   |   |   |   |   |   |   |   |   39) Population percentage: not Hispanic black < 1.4 : 0 (8/1) [4/1]
+|   |   |   |   |   |   |   |   |   39) Population percentage: not Hispanic black >= 1.4 : 1 (19/2) [14/2]
+|   |   |   |   |   |   |   |   91) Licenses >= 297 : 0 (15/0) [0/0]
+|   |   |   |   |   |   |   92) Manufacturing >= 9493.5 : 0 (68/3) [36/2]
+|   |   |   |   |   |   92) Manufacturing >= 113342.5 : 1 (43/14) [18/5]
+|   |   |   38) Population percentage: not Hispanic white >= 84.71
+|   |   |   |   92) Manufacturing < 1231
+|   |   |   |   |   04) Household mean income in dollars < 67586.5
+|   |   |   |   |   |   91) Licenses < 373.5
+|   |   |   |   |   |   |   93) Gun purchases approximate < 475458.5
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 196480.7
+|   |   |   |   |   |   |   |   |   92) Manufacturing < 9 : 1 (21/9) [5/0]
+|   |   |   |   |   |   |   |   |   92) Manufacturing >= 9
+|   |   |   |   |   |   |   |   |   |   92) Manufacturing < 24 : 0 (36/0) [23/0]
+|   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 24
+|   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 192485.5
+|   |   |   |   |   |   |   |   |   |   |   |   29) Percentage of 27) bachelor's or higher < 19.45 : 1 (21.54/5) [11/4]
+|   |   |   |   |   |   |   |   |   |   |   |   29) Percentage of 27) bachelor's or higher >= 19.45 : 0 (5.13/0.13) [3/1]
+|   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 192485.5 : 0 (42/5) [25/6]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 196480.7
+|   |   |   |   |   |   |   |   |   81) Population percentage: 18 years and over < 77
+|   |   |   |   |   |   |   |   |   |   92) Manufacturing < 146.5
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 123.5
+|   |   |   |   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher < 76.15 : 0 (20/1) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher >= 76.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   07) Percentage of 05) high school < 58.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years < 2.7 : 1 (5/0) [2.92/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   77) Population percentage: 15 to 17 years >= 2.7 : 0 (53/14) [35/19]
+|   |   |   |   |   |   |   |   |   |   |   |   |   07) Percentage of 05) high school >= 58.1 : 1 (5/0) [3.08/1]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 123.5 : 0 (13/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 146.5 : 1 (23/6) [10/1]
+|   |   |   |   |   |   |   |   |   81) Population percentage: 18 years and over >= 77
+|   |   |   |   |   |   |   |   |   |   "30) Median earnings in dollars, population 25 and over" < 40912
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 17.5 : 1 (52.96/10) [30.64/11]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 17.5
+|   |   |   |   |   |   |   |   |   |   |   |   79) Population percentage: 15 to 44 years < 41.05
+|   |   |   |   |   |   |   |   |   |   |   |   |   04) Household mean income in dollars < 38488.5 : 0 (6.12/0.08) [1.08/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   04) Household mean income in dollars >= 38488.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher < 87.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   84) Population percentage: 65 years and over < 17.75 : 1 (21.2/0) [6/2]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   84) Population percentage: 65 years and over >= 17.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   16) Percentage of 10) bachelor's < 9.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   09) Percentage of 05) bachelor's < 0.15 : 1 (6/1) [1.14/0.14]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   09) Percentage of 05) bachelor's >= 0.15 : 0 (6/0) [3.14/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   16) Percentage of 10) bachelor's >= 9.1 : 1 (9/0) [7/5]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher >= 87.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 432082.6
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   65) Population percentage: 35 to 39 years < 5.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   38) Population percentage: not Hispanic white < 90.28 : 0 (4/0) [1/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   38) Population percentage: not Hispanic white >= 90.28
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   88) Age dependency ratio < 58.75
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years < 6.25 : 0 (3.6/0) [1.45/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   64) Population percentage: 30 to 34 years >= 6.25 : 1 (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   88) Age dependency ratio >= 58.75 : 1 (8/0) [1.48/1.48]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   65) Population percentage: 35 to 39 years >= 5.15
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   70) Population percentage: 60 to 64 years < 6.15 : 1 (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   70) Population percentage: 60 to 64 years >= 6.15 : 0 (21/0) [9/4]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 432082.6 : 1 (7/0) [4/1]
+|   |   |   |   |   |   |   |   |   |   |   |   79) Population percentage: 15 to 44 years >= 41.05 : 0 (6/0) [5.96/2]
+|   |   |   |   |   |   |   |   |   |   "30) Median earnings in dollars, population 25 and over" >= 40912 : 0 (6.11/0.09) [1.11/1.03]
+|   |   |   |   |   |   |   93) Gun purchases approximate >= 475458.5 : 0 (276.67/67.33) [131.67/31.67]
+|   |   |   |   |   |   91) Licenses >= 373.5
+|   |   |   |   |   |   |   93) Gun purchases approximate < 673200.5 : 0 (4.67/0) [2/0]
+|   |   |   |   |   |   |   93) Gun purchases approximate >= 673200.5 : 1 (49.67/10) [32/5]
+|   |   |   |   |   04) Household mean income in dollars >= 67586.5
+|   |   |   |   |   |   92) Manufacturing < 199.5
+|   |   |   |   |   |   |   92) Manufacturing < 31.5
+|   |   |   |   |   |   |   |   14) Percentage of 10) some college < 22.35 : 1 (73.33/16) [30.33/14]
+|   |   |   |   |   |   |   |   14) Percentage of 10) some college >= 22.35 : 0 (20/7) [14/6]
+|   |   |   |   |   |   |   92) Manufacturing >= 31.5
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 48746.4 : 1 (13.33/1) [8/1]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 48746.4
+|   |   |   |   |   |   |   |   |   42) Population percentage: not Hispanic native Hawaiian or Pacific islander < 0.07
+|   |   |   |   |   |   |   |   |   |   13) Percentage of 10) high school < 23.35 : 0 (17.49/0) [16.33/5]
+|   |   |   |   |   |   |   |   |   |   13) Percentage of 10) high school >= 23.35
+|   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) < 107
+|   |   |   |   |   |   |   |   |   |   |   |   07) Percentage of 05) high school < 23.1 : 1 (10.15/1) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   07) Percentage of 05) high school >= 23.1
+|   |   |   |   |   |   |   |   |   |   |   |   |   "34) Median earnings in dollars, population 25 and over bachelor's" < 56840.5 : 0 (44.74/6.94) [32.59/12.59]
+|   |   |   |   |   |   |   |   |   |   |   |   |   "34) Median earnings in dollars, population 25 and over bachelor's" >= 56840.5
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years < 2.95 : 1 (7.07/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   73) Population percentage: 75 to 79 years >= 2.95 : 0 (4.38/1.17) [3.41/1.41]
+|   |   |   |   |   |   |   |   |   |   |   87) Sex ratio (males per 100 females) >= 107 : 0 (13.33/0) [7.67/4.33]
+|   |   |   |   |   |   |   |   |   42) Population percentage: not Hispanic native Hawaiian or Pacific islander >= 0.07 : 1 (9.01/0.01) [4/1]
+|   |   |   |   |   |   92) Manufacturing >= 199.5
+|   |   |   |   |   |   |   91) Licenses < 157.5 : 0 (12/0) [8/2]
+|   |   |   |   |   |   |   91) Licenses >= 157.5 : 1 (144/36) [69/17]
+|   |   |   |   92) Manufacturing >= 1231
+|   |   |   |   |   92) Manufacturing < 113293
+|   |   |   |   |   |   91) Licenses < 262.5 : 0 (304/82) [148/40]
+|   |   |   |   |   |   91) Licenses >= 262.5
+|   |   |   |   |   |   |   91) Licenses < 380.5 : 0 (131/1) [71/1]
+|   |   |   |   |   |   |   91) Licenses >= 380.5
+|   |   |   |   |   |   |   |   92) Manufacturing < 19592 : 1 (12/1) [4/0]
+|   |   |   |   |   |   |   |   92) Manufacturing >= 19592 : 0 (13/0) [8/0]
+|   |   |   |   |   92) Manufacturing >= 113293
+|   |   |   |   |   |   92) Manufacturing < 1020844.5
+|   |   |   |   |   |   |   93) Gun purchases approximate < 93927.2 : 1 (25/0) [18/0]
+|   |   |   |   |   |   |   93) Gun purchases approximate >= 93927.2
+|   |   |   |   |   |   |   |   24) Total population 45 to 64 years < 797.5 : 1 (13/1) [5/3]
+|   |   |   |   |   |   |   |   24) Total population 45 to 64 years >= 797.5 : 0 (43/20) [23/9]
+|   |   |   |   |   |   92) Manufacturing >= 1020844.5 : 0 (22/0) [12/1]
+|   41) Population percentage: not Hispanic Asian >= 1.71
+|   |   92) Manufacturing < 218975.5
+|   |   |   93) Gun purchases approximate < 117592.4
+|   |   |   |   93) Gun purchases approximate < 104255.4
+|   |   |   |   |   93) Gun purchases approximate < 32484.4 : 0 (59/0) [24/0]
+|   |   |   |   |   93) Gun purchases approximate >= 32484.4
+|   |   |   |   |   |   91) Licenses < 138.5
+|   |   |   |   |   |   |   86) Median age < 34.7 : 0 (29/0) [14/5]
+|   |   |   |   |   |   |   86) Median age >= 34.7
+|   |   |   |   |   |   |   |   82) Population percentage: 60 years and over < 24.45
+|   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher < 85.55 : 1 (20/1) [14/6]
+|   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher >= 85.55
+|   |   |   |   |   |   |   |   |   |   20) Percentage of 18) bachelor's or higher < 56.55 : 0 (14/4) [8/3]
+|   |   |   |   |   |   |   |   |   |   20) Percentage of 18) bachelor's or higher >= 56.55 : 1 (6/0) [1/0]
+|   |   |   |   |   |   |   |   82) Population percentage: 60 years and over >= 24.45 : 0 (27/4) [23/9]
+|   |   |   |   |   |   91) Licenses >= 138.5
+|   |   |   |   |   |   |   92) Manufacturing < 1500 : 1 (46/0) [16/2]
+|   |   |   |   |   |   |   92) Manufacturing >= 1500
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 93826.1 : 1 (14/2) [5/1]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 93826.1 : 0 (11/0) [9/1]
+|   |   |   |   93) Gun purchases approximate >= 104255.4 : 0 (134/2) [81/0]
+|   |   |   93) Gun purchases approximate >= 117592.4
+|   |   |   |   92) Manufacturing < 216.5
+|   |   |   |   |   91) Licenses < 154.5
+|   |   |   |   |   |   92) Manufacturing < 123 : 0 (283.53/104.27) [173/56]
+|   |   |   |   |   |   92) Manufacturing >= 123
+|   |   |   |   |   |   |   93) Gun purchases approximate < 791919.65
+|   |   |   |   |   |   |   |   68) Population percentage: 50 to 54 years < 6.65 : 0 (8/0) [7/1]
+|   |   |   |   |   |   |   |   68) Population percentage: 50 to 54 years >= 6.65
+|   |   |   |   |   |   |   |   |   54) Population percentage: Hispanic two or more races < 0.06 : 0 (3/0) [7/2]
+|   |   |   |   |   |   |   |   |   54) Population percentage: Hispanic two or more races >= 0.06
+|   |   |   |   |   |   |   |   |   |   59) Population percentage: 5 to 9 years < 5 : 0 (3/1) [1/0]
+|   |   |   |   |   |   |   |   |   |   59) Population percentage: 5 to 9 years >= 5 : 1 (7/0) [2/0]
+|   |   |   |   |   |   |   93) Gun purchases approximate >= 791919.65 : 0 (67/2) [31/4]
+|   |   |   |   |   91) Licenses >= 154.5
+|   |   |   |   |   |   93) Gun purchases approximate < 673200.5
+|   |   |   |   |   |   |   92) Manufacturing < 29.5
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 432082.6 : 1 (63/8) [41/4]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 432082.6 : 0 (8/2) [4/1]
+|   |   |   |   |   |   |   92) Manufacturing >= 29.5
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 223801.1 : 1 (27/5) [13/3]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 223801.1
+|   |   |   |   |   |   |   |   |   40) Population percentage: not Hispanic American Indian or native < 1.8
+|   |   |   |   |   |   |   |   |   |   06) Percentage of 05) less than high school < 13.5
+|   |   |   |   |   |   |   |   |   |   |   07) Percentage of 05) high school < 22.1
+|   |   |   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college < 19.55 : 0 (14/0) [10/4]
+|   |   |   |   |   |   |   |   |   |   |   |   14) Percentage of 10) some college >= 19.55
+|   |   |   |   |   |   |   |   |   |   |   |   |   51) Population percentage: Hispanic Asian < 0.01 : 1 (7/2) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   |   51) Population percentage: Hispanic Asian >= 0.01 : 0 (5/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   07) Percentage of 05) high school >= 22.1 : 0 (33/0) [23/4]
+|   |   |   |   |   |   |   |   |   |   06) Percentage of 05) less than high school >= 13.5
+|   |   |   |   |   |   |   |   |   |   |   67) Population percentage: 45 to 49 years < 8.6
+|   |   |   |   |   |   |   |   |   |   |   |   26) Percentage of 24) bachelor's or higher < 20.4 : 0 (12/0) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   26) Percentage of 24) bachelor's or higher >= 20.4
+|   |   |   |   |   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher < 86.45 : 1 (16/6) [8/3]
+|   |   |   |   |   |   |   |   |   |   |   |   |   28) Percentage of 27) high school or higher >= 86.45 : 0 (7/0) [10/6]
+|   |   |   |   |   |   |   |   |   |   |   67) Population percentage: 45 to 49 years >= 8.6 : 1 (7/0) [2/1]
+|   |   |   |   |   |   |   |   |   40) Population percentage: not Hispanic American Indian or native >= 1.8 : 1 (11/0) [5/0]
+|   |   |   |   |   |   93) Gun purchases approximate >= 673200.5
+|   |   |   |   |   |   |   93) Gun purchases approximate < 1018338.3
+|   |   |   |   |   |   |   |   39) Population percentage: not Hispanic black < 4.15
+|   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher < 93.8 : 0 (3/0) [2/0]
+|   |   |   |   |   |   |   |   |   25) Percentage of 24) high school or higher >= 93.8 : 1 (24.08/3.08) [11/3]
+|   |   |   |   |   |   |   |   39) Population percentage: not Hispanic black >= 4.15 : 1 (66.19/0.19) [41/4]
+|   |   |   |   |   |   |   93) Gun purchases approximate >= 1018338.3
+|   |   |   |   |   |   |   |   91) Licenses < 195 : 1 (3/0) [1/0]
+|   |   |   |   |   |   |   |   91) Licenses >= 195 : 0 (10/0) [4/0]
+|   |   |   |   92) Manufacturing >= 216.5
+|   |   |   |   |   92) Manufacturing < 9342
+|   |   |   |   |   |   92) Manufacturing < 5145
+|   |   |   |   |   |   |   92) Manufacturing < 1231
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 673200.5
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 321629.35 : 1 (161/25) [74/6]
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 321629.35
+|   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 459120.5 : 0 (64/1) [23/0]
+|   |   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 459120.5
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 488.5 : 1 (14/0) [10/2]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 488.5 : 0 (14/1) [7/2]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 673200.5
+|   |   |   |   |   |   |   |   |   91) Licenses < 355.5
+|   |   |   |   |   |   |   |   |   |   13) Percentage of 10) high school < 20.05
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing < 1186.5 : 1 (110/4) [45/3]
+|   |   |   |   |   |   |   |   |   |   |   92) Manufacturing >= 1186.5 : 0 (2/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   13) Percentage of 10) high school >= 20.05 : 1 (110/29) [53/10]
+|   |   |   |   |   |   |   |   |   91) Licenses >= 355.5 : 1 (78/0) [34/2]
+|   |   |   |   |   |   |   92) Manufacturing >= 1231
+|   |   |   |   |   |   |   |   40) Population percentage: not Hispanic American Indian or native < 0.17
+|   |   |   |   |   |   |   |   |   72) Population percentage: 70 to 74 years < 2.55 : 0 (25/7) [13/5]
+|   |   |   |   |   |   |   |   |   72) Population percentage: 70 to 74 years >= 2.55
+|   |   |   |   |   |   |   |   |   |   47) Population percentage: Hispanic < 2.79 : 0 (19/7) [9/1]
+|   |   |   |   |   |   |   |   |   |   47) Population percentage: Hispanic >= 2.79 : 1 (42/7) [21/7]
+|   |   |   |   |   |   |   |   40) Population percentage: not Hispanic American Indian or native >= 0.17
+|   |   |   |   |   |   |   |   |   18) Total population 25 to 34 years < 3837
+|   |   |   |   |   |   |   |   |   |   91) Licenses < 150.5 : 0 (34/4) [15/5]
+|   |   |   |   |   |   |   |   |   |   91) Licenses >= 150.5
+|   |   |   |   |   |   |   |   |   |   |   27) Total population 65 and over < 730.5 : 0 (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   |   27) Total population 65 and over >= 730.5
+|   |   |   |   |   |   |   |   |   |   |   |   68) Population percentage: 50 to 54 years < 8.9 : 1 (9/0) [5/1]
+|   |   |   |   |   |   |   |   |   |   |   |   68) Population percentage: 50 to 54 years >= 8.9 : 0 (2/0) [2/0]
+|   |   |   |   |   |   |   |   |   18) Total population 25 to 34 years >= 3837 : 0 (24/0) [11/5]
+|   |   |   |   |   |   92) Manufacturing >= 5145 : 1 (252/6) [131/2]
+|   |   |   |   |   92) Manufacturing >= 9342
+|   |   |   |   |   |   91) Licenses < 307.5
+|   |   |   |   |   |   |   92) Manufacturing < 36165.5 : 0 (40/3) [18/4]
+|   |   |   |   |   |   |   92) Manufacturing >= 36165.5
+|   |   |   |   |   |   |   |   93) Gun purchases approximate < 324408.05
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate < 141594.3 : 1 (43/3) [15/0]
+|   |   |   |   |   |   |   |   |   93) Gun purchases approximate >= 141594.3 : 0 (52/5) [33/1]
+|   |   |   |   |   |   |   |   93) Gun purchases approximate >= 324408.05
+|   |   |   |   |   |   |   |   |   41) Population percentage: not Hispanic Asian < 2.69
+|   |   |   |   |   |   |   |   |   |   03) Household median income in dollars < 50944.5 : 0 (4/0) [1/0]
+|   |   |   |   |   |   |   |   |   |   03) Household median income in dollars >= 50944.5 : 1 (12/1) [2/2]
+|   |   |   |   |   |   |   |   |   41) Population percentage: not Hispanic Asian >= 2.69 : 1 (96/0) [45/2]
+|   |   |   |   |   |   91) Licenses >= 307.5 : 0 (92/2) [45/5]
+|   |   92) Manufacturing >= 218975.5
+|   |   |   92) Manufacturing < 499784 : 1 (366/2) [179.27/3]
+|   |   |   92) Manufacturing >= 499784
+|   |   |   |   "34) Median earnings in dollars, population 25 and over bachelor's" < 63321
+|   |   |   |   |   59) Population percentage: 5 to 9 years < 5.1
+|   |   |   |   |   |   15) Percentage of 10) associate's degree < 7.85 : 1 (2/0) [4/0]
+|   |   |   |   |   |   15) Percentage of 10) associate's degree >= 7.85 : 0 (7/0) [4/0]
+|   |   |   |   |   59) Population percentage: 5 to 9 years >= 5.1
+|   |   |   |   |   |   91) Licenses < 407 : 1 (19/1) [11/4]
+|   |   |   |   |   |   91) Licenses >= 407 : 0 (3/0) [4/0]
+|   |   |   |   "34) Median earnings in dollars, population 25 and over bachelor's" >= 63321 : 0 (13/0) [1/0]
+
+Size of the tree : 539
+
+Time taken to build model: 469.23 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0.02 seconds
+
+=== Summary ===
+
+Correctly Classified Instances        5776               87.1981 %
+Incorrectly Classified Instances       848               12.8019 %
+Kappa statistic                          0.5605
+Mean absolute error                      0.1682
+Root mean squared error                  0.3049
+Relative absolute error                 52.3664 %
+Root relative squared error             76.4449 %
+Total Number of Instances             6624     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.948    0.435    0.898      0.948    0.922      0.567    0.906     0.970     0
+                 0.565    0.052    0.728      0.565    0.637      0.567    0.906     0.717     1
+Weighted Avg.    0.872    0.359    0.864      0.872    0.866      0.567    0.906     0.920     
+
+=== Confusion Matrix ===
+
+    a    b   <-- classified as
+ 5033  277 |    a = 0
+  571  743 |    b = 1
+

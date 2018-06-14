@@ -1,0 +1,239 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.MultilayerPerceptron -L 0.3 -M 0.2 -N 500 -V 0 -S 0 -E 20 -H 1
+Relation:     zip_2014_predictive_tabs.txt-weka.filters.unsupervised.attribute.NumericToNominal-Rlast-weka.filters.supervised.attribute.NominalToBinary-weka.filters.unsupervised.attribute.NominalToBinary-Rlast-weka.filters.unsupervised.attribute.Remove-R1-3
+Instances:    33120
+Attributes:   92
+              03) Household median income in dollars
+              04) Household mean income in dollars
+              05) Total population 18 to 24 years
+              06) Percentage of 05) less than high school
+              07) Percentage of 05) high school
+              08) Percentage of 05) some college
+              09) Percentage of 05) bachelor's
+              10) Total population 25 years and over
+              11) Percentage of 10)less than 9th grade
+              12) Percentage of 10) 9th to 12th no diploma
+              13) Percentage of 10) high school
+              14) Percentage of 10) some college
+              15) Percentage of 10) associate's degree
+              16) Percentage of 10) bachelor's
+              17) Percentage of 10) graduate degree
+              18) Total population 25 to 34 years
+              19) Percentage of 18) high school or higher
+              20) Percentage of 18) bachelor's or higher
+              21) Total population 35 to 44 years
+              22) Percentage of 21) high school or higher
+              23) Percentage of 21) bachelor's or higher
+              24) Total population 45 to 64 years
+              25) Percentage of 24) high school or higher
+              26) Percentage of 24) bachelor's or higher
+              27) Total population 65 and over
+              28) Percentage of 27) high school or higher
+              29) Percentage of 27) bachelor's or higher
+              "30) Median earnings in dollars, population 25 and over"
+              "31) Median earnings in dollars, population 25 and over less than high school"
+              "32) Median earnings in dollars, population 25 and over high school"
+              "33) Median earnings in dollars, population 25 and over some college"
+              "34) Median earnings in dollars, population 25 and over bachelor's"
+              "35) Median earnings in dollars, population 25 and over graduate degree"
+              36) Population total
+              37) Population percentage: not Hispanic
+              38) Population percentage: not Hispanic white
+              39) Population percentage: not Hispanic black
+              40) Population percentage: not Hispanic American Indian or native
+              41) Population percentage: not Hispanic Asian
+              42) Population percentage: not Hispanic native Hawaiian or Pacific islander
+              43) Population percentage: not Hispanic some other race
+              44) Population percentage: not Hispanic two or more races
+              45) Population percentage: not Hispanic two or more races including some other race
+              46) Population percentage: not Hispanic two or more races excluding some other race
+              47) Population percentage: Hispanic
+              48) Population percentage: Hispanic white
+              49) Population percentage: Hispanic black
+              50) Population percentage: Hispanic American Indian or native
+              51) Population percentage: Hispanic Asian
+              52) Population percentage: Hispanic native Hawaiian or Pacific islander
+              53) Population percentage: Hispanic some other race
+              54) Population percentage: Hispanic two or more races
+              55) Population percentage: Hispanic two or more races including some other race
+              56) Population percentage: Hispanic two or more races excluding some other race
+              57) Population total
+              58) Population percentage: under 5 years
+              59) Population percentage: 5 to 9 years
+              60) Population percentage: 10 to 14 years
+              61) Population percentage: 15 to 19 years
+              62) Population percentage: 20 to 24 years
+              63) Population percentage: 25 to 29 years
+              64) Population percentage: 30 to 34 years
+              65) Population percentage: 35 to 39 years
+              66) Population percentage: 40 to 44 years
+              67) Population percentage: 45 to 49 years
+              68) Population percentage: 50 to 54 years
+              69) Population percentage: 55 to 59 years
+              70) Population percentage: 60 to 64 years
+              71) Population percentage: 65 to 69 years
+              72) Population percentage: 70 to 74 years
+              73) Population percentage: 75 to 79 years
+              74) Population percentage: 80 to 84 years
+              75) Population percentage: 85 years and over
+              76) Population percentage: 5 to 14 years
+              77) Population percentage: 15 to 17 years
+              78) Population percentage: 18 to 24 years
+              79) Population percentage: 15 to 44 years
+              80) Population percentage: 16 years and over
+              81) Population percentage: 18 years and over
+              82) Population percentage: 60 years and over
+              83) Population percentage: 62 years and over
+              84) Population percentage: 65 years and over
+              85) Population percentage: 75 years and over
+              86) Median age
+              87) Sex ratio (males per 100 females)
+              88) Age dependency ratio
+              89) Old-age dependency ratio
+              90) Child dependency ratio
+              91) Licenses
+              92) Manufacturing
+              93) Gun purchases approximate
+              VIOLENT?
+Test mode:    5-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Sigmoid Node 0
+    Inputs    Weights
+    Threshold    -0.1532287950841038
+    Node 2    2.159328691011608
+Sigmoid Node 1
+    Inputs    Weights
+    Threshold    0.15322879508410361
+    Node 2    -2.159328691011608
+Sigmoid Node 2
+    Inputs    Weights
+    Threshold    -8.199164270077807
+    Attrib 03) Household median income in dollars    -11.618858130743426
+    Attrib 04) Household mean income in dollars    -13.068422865503676
+    Attrib 05) Total population 18 to 24 years    2.786793952717214
+    Attrib 06) Percentage of 05) less than high school    12.105122801651623
+    Attrib 07) Percentage of 05) high school    5.9634902768007985
+    Attrib 08) Percentage of 05) some college    3.647827227927955
+    Attrib 09) Percentage of 05) bachelor's    -2.9935557742881187
+    Attrib 10) Total population 25 years and over    -7.174789777390387
+    Attrib 11) Percentage of 10)less than 9th grade    -4.927194703324518
+    Attrib 12) Percentage of 10) 9th to 12th no diploma    -5.5282153006788315
+    Attrib 13) Percentage of 10) high school    10.169002386799628
+    Attrib 14) Percentage of 10) some college    -15.675580774947498
+    Attrib 15) Percentage of 10) associate's degree    -12.169181366547878
+    Attrib 16) Percentage of 10) bachelor's    -14.553703928058253
+    Attrib 17) Percentage of 10) graduate degree    0.7524061316608351
+    Attrib 18) Total population 25 to 34 years    1.164953266175903
+    Attrib 19) Percentage of 18) high school or higher    -0.9074387079517227
+    Attrib 20) Percentage of 18) bachelor's or higher    2.793124545468088
+    Attrib 21) Total population 35 to 44 years    3.592121262737806
+    Attrib 22) Percentage of 21) high school or higher    9.911637130737056
+    Attrib 23) Percentage of 21) bachelor's or higher    0.9691633233465229
+    Attrib 24) Total population 45 to 64 years    -3.851928505649149
+    Attrib 25) Percentage of 24) high school or higher    6.674272213530486
+    Attrib 26) Percentage of 24) bachelor's or higher    6.610025401153671
+    Attrib 27) Total population 65 and over    -9.872113714986565
+    Attrib 28) Percentage of 27) high school or higher    4.186664572849093
+    Attrib 29) Percentage of 27) bachelor's or higher    0.1184582040890965
+    Attrib "30) Median earnings in dollars, population 25 and over"    -5.323859305411658
+    Attrib "31) Median earnings in dollars, population 25 and over less than high school"    6.657618188941019
+    Attrib "32) Median earnings in dollars, population 25 and over high school"    -2.981648971346357
+    Attrib "33) Median earnings in dollars, population 25 and over some college"    -17.76483693324968
+    Attrib "34) Median earnings in dollars, population 25 and over bachelor's"    -8.877161140982716
+    Attrib "35) Median earnings in dollars, population 25 and over graduate degree"    7.447319455305657
+    Attrib 36) Population total    1.3259158159298068
+    Attrib 37) Population percentage: not Hispanic    9.48914616770899
+    Attrib 38) Population percentage: not Hispanic white    16.58041951376132
+    Attrib 39) Population percentage: not Hispanic black    9.024954950730686
+    Attrib 40) Population percentage: not Hispanic American Indian or native    4.148108756460029
+    Attrib 41) Population percentage: not Hispanic Asian    7.4395734404212694
+    Attrib 42) Population percentage: not Hispanic native Hawaiian or Pacific islander    17.16486199806751
+    Attrib 43) Population percentage: not Hispanic some other race    8.699448243820529
+    Attrib 44) Population percentage: not Hispanic two or more races    0.3367409359299545
+    Attrib 45) Population percentage: not Hispanic two or more races including some other race    5.8168606142035895
+    Attrib 46) Population percentage: not Hispanic two or more races excluding some other race    0.934445643836081
+    Attrib 47) Population percentage: Hispanic    3.1494485896032
+    Attrib 48) Population percentage: Hispanic white    17.802827636464237
+    Attrib 49) Population percentage: Hispanic black    25.097080571172878
+    Attrib 50) Population percentage: Hispanic American Indian or native    7.694983612556797
+    Attrib 51) Population percentage: Hispanic Asian    5.0339064750940965
+    Attrib 52) Population percentage: Hispanic native Hawaiian or Pacific islander    12.889035001696925
+    Attrib 53) Population percentage: Hispanic some other race    -15.662666744105001
+    Attrib 54) Population percentage: Hispanic two or more races    9.50950107473379
+    Attrib 55) Population percentage: Hispanic two or more races including some other race    1.2376278443277768
+    Attrib 56) Population percentage: Hispanic two or more races excluding some other race    15.642320202774068
+    Attrib 57) Population total    0.07460021825477627
+    Attrib 58) Population percentage: under 5 years    3.3798748092951714
+    Attrib 59) Population percentage: 5 to 9 years    3.113160787285647
+    Attrib 60) Population percentage: 10 to 14 years    -0.3239401035857169
+    Attrib 61) Population percentage: 15 to 19 years    9.836338280388581
+    Attrib 62) Population percentage: 20 to 24 years    -3.375899864857179
+    Attrib 63) Population percentage: 25 to 29 years    10.180602216286289
+    Attrib 64) Population percentage: 30 to 34 years    2.567891979694311
+    Attrib 65) Population percentage: 35 to 39 years    -2.2366689555089474
+    Attrib 66) Population percentage: 40 to 44 years    -4.152217419392786
+    Attrib 67) Population percentage: 45 to 49 years    -10.282752273671818
+    Attrib 68) Population percentage: 50 to 54 years    2.331216403562013
+    Attrib 69) Population percentage: 55 to 59 years    -2.6135249864591694
+    Attrib 70) Population percentage: 60 to 64 years    25.48934121533383
+    Attrib 71) Population percentage: 65 to 69 years    -1.664575081890633
+    Attrib 72) Population percentage: 70 to 74 years    -0.700336164135459
+    Attrib 73) Population percentage: 75 to 79 years    17.550597823929664
+    Attrib 74) Population percentage: 80 to 84 years    4.3600578865449915
+    Attrib 75) Population percentage: 85 years and over    -19.662259433956976
+    Attrib 76) Population percentage: 5 to 14 years    0.08215717275114083
+    Attrib 77) Population percentage: 15 to 17 years    -7.994355957603104
+    Attrib 78) Population percentage: 18 to 24 years    15.019868518275825
+    Attrib 79) Population percentage: 15 to 44 years    -3.5716177768228716
+    Attrib 80) Population percentage: 16 years and over    -9.996426161107625
+    Attrib 81) Population percentage: 18 years and over    -3.389427860400893
+    Attrib 82) Population percentage: 60 years and over    9.67152330284914
+    Attrib 83) Population percentage: 62 years and over    -5.19375550283093
+    Attrib 84) Population percentage: 65 years and over    -12.165603822266554
+    Attrib 85) Population percentage: 75 years and over    -3.090433504999744
+    Attrib 86) Median age    -2.0854424519898447
+    Attrib 87) Sex ratio (males per 100 females)    6.467394562236996
+    Attrib 88) Age dependency ratio    6.894346046630822
+    Attrib 89) Old-age dependency ratio    17.287820339285467
+    Attrib 90) Child dependency ratio    18.894958487715524
+    Attrib 91) Licenses    -69.48215922360903
+    Attrib 92) Manufacturing    -111.81814485780093
+    Attrib 93) Gun purchases approximate    -2.2369656826322823
+Class 0
+    Input
+    Node 0
+Class 1
+    Input
+    Node 1
+
+
+Time taken to build model: 41.15 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances       26258               79.2814 %
+Incorrectly Classified Instances      6862               20.7186 %
+Kappa statistic                          0.2775
+Mean absolute error                      0.274 
+Root mean squared error                  0.3705
+Relative absolute error                 84.7755 %
+Root relative squared error             92.1706 %
+Total Number of Instances            33120     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.908    0.662    0.844      0.908    0.875      0.284    0.728     0.887     0
+                 0.338    0.092    0.484      0.338    0.398      0.284    0.728     0.428     1
+Weighted Avg.    0.793    0.547    0.771      0.793    0.778      0.284    0.728     0.794     
+
+=== Confusion Matrix ===
+
+     a     b   <-- classified as
+ 23991  2418 |     a = 0
+  4444  2267 |     b = 1
+
